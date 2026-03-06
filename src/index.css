@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "bootstrap-icons";
+
+/* ===================================
+   THEME TOKENS - MONO + NEON GREEN
+=================================== */
+
+@theme {
+  /* Backgrounds */
+  --color-bg-primary: #f5f5f5;
+  /* soft white */
+  --color-bg-surface: #eaeaea;
+  /* card surface */
+
+  /* Text */
+  --color-text-primary: #111111;
+  /* soft black */
+  --color-text-muted: #555555;
+  --color-text-invert: #f5f5f5;
+
+  /* Borders */
+  --color-border: #d4d4d4;
+
+  /* Accent */
+  --color-accent: #39ff14;
+  /* neon green */
+  --color-accent-hover: #2bff00;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-bg-primary: #0f0f0f;
+  /* soft black */
+  --color-bg-surface: #1a1a1a;
+  /* elevated card */
+
+  /* Text */
+  --color-text-primary: #f0f0f0;
+  /* soft white */
+  --color-text-muted: #aaaaaa;
+  --color-text-invert: #0f0f0f;
+
+  /* Borders */
+  --color-border: #2a2a2a;
+
+  /* Accent stays same */
+  --color-accent: #39ff14;
+  --color-accent-hover: #2bff00;
+}
+
+/* Base */
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  transition: background-color 300ms ease, color 300ms ease;
+}
