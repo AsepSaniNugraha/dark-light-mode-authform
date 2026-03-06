@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import ThemeButton from './components/ThemeButton'
 import WelcomePage from './components/WelcomePage'
 import AuthLayout from './components/auth/AuthLayout'
@@ -11,10 +11,10 @@ import AuthChangePassword from './components/auth/AuthChangePassword'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeButton />
       <Routes>
-        <Route path="" element={<WelcomePage />} />
+        <Route index element={<WelcomePage />} />
         <Route path="auth" element={<AuthLayout />}>
           <Route index element={<AuthForm />} />
           <Route path="register" element={<AuthRegister />} />
@@ -25,7 +25,7 @@ function App() {
 
         </Route>
       </Routes>
-    </BrowserRouter >
+    </HashRouter >
   )
 }
 
